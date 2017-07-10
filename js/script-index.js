@@ -2,6 +2,7 @@ $(document).ready( function(){
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
+	renderActivities(activities);
 
 	function printNews(){
 	$("p").append(document.createTextNode("NUEVAS RECETAS"))
@@ -44,8 +45,8 @@ function renderRecipe(recipe) {
 /*
 * Función que se encarga de pintar todas las actividades
 */
-function renderActivities(activitiesArray) {
-	console.log('Activities: ', activitiesArray);
+function renderActivities(activities) {
+	console.log('Activities: ', activities);
 }
 
 /*

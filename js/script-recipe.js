@@ -24,4 +24,6 @@ function btns(){
     });
 
 };
-	
+	$(".js-back").click(function(){
+		window.location.href ="index.html"
+	});

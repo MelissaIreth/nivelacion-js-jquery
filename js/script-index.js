@@ -3,6 +3,7 @@ $(document).ready( function(){
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 	renderActivities(activities);
+	renderActivity(activities);
 
 	function printNews(){
 	$("p").append(document.createTextNode("NUEVAS RECETAS"))
@@ -51,17 +52,15 @@ function renderActivities(activities) {
 		if(d != 0){
 			$(".wrapper-message").css("display", "none")
 		}
-	})
-}
+	});
+};
 
 /*
 * Función que se encarga de pintar una actividad
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-activity.html"
 */
-function renderActivity(recipe) {
-
-	
+function renderActivity(activities) {
+	$(".list-activities").append('<a href="#" class="item-activity"><span class="attribution"><span class="avatar"><img src="'+activities.userAvatar+'" class="image-avatar"></span><span class="meta"><span class="author">'+activities.userName+'</span> made <span class="recipe">'+activities.recipeName+'</span>:'+activities.text+'<span class="location">&mdash;'+activities.place+'</span></span></span><div class="bg-image" style="background-image: url('+activities.image+');"></div></a>');
 }
-
 

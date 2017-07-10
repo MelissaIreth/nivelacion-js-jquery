@@ -10,11 +10,9 @@ $(document).ready( function(){
 
 });
 
-$("#hide").ready(function(){
+	$("#hide").ready(function(){
 		$(".js-back").hide()
 	});
-
-
 
 
 
@@ -25,7 +23,12 @@ $("#hide").ready(function(){
 */
 function renderHighlightedRecipes(recipesArray) {
 	console.log('Recipes: ', recipesArray);
-}
+	recipesArray.forEach(function(data){
+		if(data.highlighted == true){
+			renderRecipe()
+		}
+	});			
+};
 
 /*
 * Función que se encarga de pintar UNA recetas que tenga 

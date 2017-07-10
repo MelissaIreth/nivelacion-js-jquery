@@ -10,12 +10,12 @@ $(document).ready(function(){
 
 function btns(){
     	$(".js-show-recipe").click(function(){
-			alert("You can see our recipes")
-			
+			console.log("You can see our recipes")
+			$(".page.recipe").removeClass('make')
 	});
     	$(".js-show-make").click(function(){
-    		alert("And you can also make your own recipes")
-    		
+    		console.log("And you can also make your own recipes")
+    		$(".page.recipe").addClass('make')
     });
 
 };

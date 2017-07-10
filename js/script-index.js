@@ -25,7 +25,7 @@ function renderHighlightedRecipes(recipesArray) {
 	console.log('Recipes: ', recipesArray);
 	recipesArray.forEach(function(data){
 		if(data.highlighted == true){
-			renderRecipe()
+			renderRecipe(data)
 		}
 	});			
 };

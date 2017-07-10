@@ -3,11 +3,21 @@ $(document).ready( function(){
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
+	function printNews(){
+	$("p").append(document.createTextNode("NUEVAS RECETAS"))
+	};
+	printNews();
+
 });
 
 $("#hide").ready(function(){
 		$(".js-back").hide()
-	})
+	});
+
+
+
+
+
 
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 

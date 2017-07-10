@@ -49,10 +49,12 @@ function renderRecipe(recipe) {
 function renderActivities(activities) {
 	console.log('Activities: ', activities);
 	activities.forEach(function(d){
+		renderActivity(d);
+		});
 		if(d != 0){
 			$(".wrapper-message").css("display", "none")
 		}
-	});
+	
 };
 
 /*
@@ -61,6 +63,6 @@ function renderActivities(activities) {
 * archivo "templates/templates-activity.html"
 */
 function renderActivity(activities) {
-	$(".list-activities").append('<a href="#" class="item-activity"><span class="attribution"><span class="avatar"><img src="'+activities.userAvatar+'" class="image-avatar"></span><span class="meta"><span class="author">'+activities.userName+'</span> made <span class="recipe">'+activities.recipeName+'</span>:'+activities.text+'<span class="location">&mdash;'+activities.place+'</span></span></span><div class="bg-image" style="background-image: url('+activities.image+');"></div></a>');
+	$(".list-activities").append('<a href="#" class="item-activity"><span class="attribution"><span class="avatar"><img src='+activities.userAvatar+' class="image-avatar"></span><span class="meta"><span class="author">'+activities.userName+'</span> made <span class="recipe">'+activities.recipeName+'</span>:'+activities.text+'<span class="location">&mdash;'+activities.place+'</span></span></span><div class="bg-image" style="background-image: url('+activities.image+');"></div></a>');
 }
 

@@ -5,6 +5,9 @@ $(document).ready( function(){
 
 });
 
+$("#hide").ready(function(){
+		$(".js-back").hide()
+	})
 
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
@@ -23,7 +26,6 @@ function renderHighlightedRecipes(recipesArray) {
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
 }
-
 
 
 /*

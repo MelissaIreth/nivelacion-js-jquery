@@ -47,6 +47,11 @@ function renderRecipe(recipe) {
 */
 function renderActivities(activities) {
 	console.log('Activities: ', activities);
+	activities.forEach(function(d){
+		if(d != 0){
+			$(".wrapper-message").css("display", "none")
+		}
+	})
 }
 
 /*
@@ -55,6 +60,7 @@ function renderActivities(activities) {
 * archivo "templates/templates-activity.html"
 */
 function renderActivity(recipe) {
+
 	
 }
 
